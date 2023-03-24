@@ -52,6 +52,10 @@ function updateCartPreview() {
   let prevItem = document.getElementById('items').value;
   let prevQty = parseInt(document.getElementById('quantity').value);
   // TODO: Add a new element to the cartContents div with that information
+  let cartItem = document.createElement('div');
+  cartItem.textContent = `${prevItem} x ${prevQty}`;
+  let cartContents = document.getElementById('cartContents');
+  cartContents.appendChild(cartItem);
 }
 
 // Set up the "submit" event listener on the form.
